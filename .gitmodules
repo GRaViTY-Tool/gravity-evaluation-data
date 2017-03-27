@@ -1,3 +1,6 @@
 [submodule "ganttproject"]
 	path = ganttproject
 	url = https://github.com/bardsoftware/ganttproject.git
+[submodule "prowide-core"]
+	path = prowide-core
+	url = https://github.com/prowide/prowide-core.git
