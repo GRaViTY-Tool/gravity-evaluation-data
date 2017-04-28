@@ -173,20 +173,31 @@ public class SecureMailApp extends MailApp {
 	public void scedule(String message, List<String> receivers) {
 		Pattern regex = Pattern.compile("\\w+@\\w+\\.[a-z]+");
 		List<String> mail = new LinkedList<String>();
+		String eMailAddress = "";
 		for(String text : receivers){
 			if(regex.matcher(text).matches()){
-				mail.add(text);
+				//mail.add(text);
+				eMailAddress = text;
 			}
 			else if(contacts.containsKey(text)){
-				mail.add(contacts.get(text).getMail());
+				//mail.add(contacts.get(text).getMail());
+				Contact contact = contacts.get(text);
+				eMailAddress = contact.getMail();
+				message = encryptMessage(message, contact);
 			}
 			else{
 				System.out.println("The receiver \""+text+"\" is no mail address or contact name.");
 			}
 		}
-		outbox.add(signMessage(new Message(message, receivers)));
+		outbox.add(signMessage(new Message(message, eMailAddress)));
 	}
 
+	public String encryptMessage(String message, Contact contact){
+		RsaAdapter rsa = RsaAdapter.init();
+		return rsa.encrypt(message, contact.getKey());
+	}
+	
+	
 	@High
 	public Message signMessage(Message message) {
 		RsaAdapter rsa = RsaAdapter.init();

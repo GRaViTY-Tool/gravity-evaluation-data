@@ -1,7 +1,11 @@
 package example.mailapp;
 
+import java.security.Key;
 import java.security.KeyPair;
 import java.security.Signature;
+
+import javax.crypto.Cipher;
+
 import org.gravity.security.annotations.requirements.Critical;
 import org.gravity.security.annotations.requirements.High;
 
@@ -32,6 +36,18 @@ public class RsaAdapter {
 		return null;
 	}
 
+	public String encrypt(String text, Key key){
+		try{
+			 Cipher cipher = Cipher.getInstance("DES/CBC/PKCS5Padding");
+			 cipher.init(Cipher.ENCRYPT_MODE,key);
+			 cipher.update(text.getBytes());
+			 return new String(cipher.doFinal());
+		 }catch (Exception e){
+			 e.printStackTrace();
+		 }
+		return null;
+	}
+	
 	@High
 	public void setKey(KeyPair key) {
 		this.key = key;

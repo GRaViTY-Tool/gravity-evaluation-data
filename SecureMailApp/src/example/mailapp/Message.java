@@ -1,5 +1,7 @@
 package example.mailapp;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Message {
@@ -12,6 +14,12 @@ public class Message {
 	public Message(String text, List<String> receivers) {
 		this.text = text;
 		this.receivers = receivers;
+		this.encoding = "UTF-8";
+	}
+	
+	public Message(String text, String receiver) {
+		this.text = text;
+		this.receivers = Arrays.asList(receiver);
 		this.encoding = "UTF-8";
 	}
 	
