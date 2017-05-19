@@ -30,32 +30,31 @@ public class Contact {
 		this.mail = mail;
 	}
 	
-	public Key getKey(){
-		Key key = getKeyFromServer("server1");
+	public Key findKey(){
+		Key key = findKeyFromServer("server1");
 		if(key != null){
 			return key;
 		}
-		key = getKeyFromServer("server2");
+		key = findKeyFromServer("server2");
 		if(key != null){
 			return key;
 		}
-		key = getKeyFromServer("server3");
+		key = findKeyFromServer("server3");
 		if(key != null){
 			return key;
 		}
-		key = getKeyFromServer("server4");
+		key = findKeyFromServer("server4");
 		if(key != null){
 			return key;
 		}
-		key = getKeyFromServer("server5");
+		key = findKeyFromServer("server5");
 		if(key != null){
 			return key;
 		}
 		return null;
 	}
 	
-	public Key getKeyFromServer(String url){
-		//...........TODO
+	public Key findKeyFromServer(String url){
 		return null;
 	}
 	
