@@ -4,3 +4,9 @@
 [submodule "prowide-core"]
 	path = prowide-core
 	url = https://github.com/prowide/prowide-core.git
+[submodule "mozilla-rhino"]
+	path = mozilla-rhino
+	url = https://github.com/mozilla/rhino.git
+[submodule "ant"]
+	path = apache-ant
+	url = https://git-wip-us.apache.org/repos/asf/ant.git
