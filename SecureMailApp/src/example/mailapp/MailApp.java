@@ -92,7 +92,7 @@ public class MailApp {
 				} else if (text == null) {
 					System.out.println("Message has no text.");
 				} else {
-					scedule(text, receivers);
+					schedule(text, receivers);
 				}
 
 			} else if (next.startsWith("add")) {
@@ -181,7 +181,7 @@ public class MailApp {
 		}
 	}
 
-	public void scedule(String message, List<String> receivers) {
+	public void schedule(String message, List<String> receivers) {
 		Pattern regex = Pattern.compile(".+@.+\\.[a-z]+");
 		List<String> mail = new LinkedList<String>();
 		for (String text : receivers) {

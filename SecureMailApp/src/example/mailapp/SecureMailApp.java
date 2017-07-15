@@ -170,7 +170,7 @@ public class SecureMailApp extends MailApp {
 	}
 
 	@Override
-	public void scedule(String message, List<String> receivers) {
+	public void schedule(String message, List<String> receivers) {
 		Pattern regex = Pattern.compile("\\w+@\\w+\\.[a-z]+");
 		List<String> mail = new LinkedList<String>();
 		String eMailAddress = "";
@@ -192,9 +192,28 @@ public class SecureMailApp extends MailApp {
 		outbox.add(signMessage(new Message(message, eMailAddress)));
 	}
 
+	@High
 	public String encryptMessage(String message, Contact contact){
 		RsaAdapter rsa = RsaAdapter.init();
-		return rsa.encrypt(message, contact.getKey());
+		if(contact.findKey() == null){
+			return message;
+		}
+		if(contact.findKey().equals("")){
+			return message;
+		}
+		if(contact.findKey().equals(" ")){
+			return message;
+		}
+		if(contact.findKey().equals("\t")){
+			return message;
+		}
+		if(contact.findKey().equals("null")){
+			return message;
+		}
+		if(contact.findKey().equals("default")){
+			return message;
+		}
+		return rsa.encrypt(message, contact.findKey());
 	}
 	
 	
