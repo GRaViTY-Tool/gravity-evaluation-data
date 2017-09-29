@@ -10,3 +10,6 @@
 [submodule "ant"]
 	path = apache-ant
 	url = https://git-wip-us.apache.org/repos/asf/ant.git
+[submodule "umlet"]
+	path = umlet
+	url = https://github.com/umlet/umlet.git
