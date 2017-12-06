@@ -13,3 +13,24 @@
 [submodule "umlet"]
 	path = umlet
 	url = https://github.com/umlet/umlet.git
+[submodule "junit5"]
+	path = junit5
+	url = https://github.com/junit-team/junit5.git
+[submodule "junit4"]
+	path = junit4
+	url = https://github.com/junit-team/junit4.git
+[submodule "apache-nutch"]
+	path = apache-nutch
+	url = https://gitbox.apache.org/repos/asf/nutch.git
+[submodule "apache-lucene"]
+	path = apache-lucene
+	url = https://github.com/apache/lucene-solr.git
+[submodule "apache-log4j"]
+	path = apache-log4j
+	url = ttps://git-wip-us.apache.org/repos/asf/logging-log4j2.git
+[submodule "gephi"]
+	path = gephi
+	url = https://github.com/gephi/gephi.git
+[submodule "freemind-code"]
+	path = freemind-code
+	url = https://git.code.sf.net/p/freemind/code

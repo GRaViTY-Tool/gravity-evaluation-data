@@ -1,0 +1,9 @@
+Program		| LOC
+-------------------------------------------
+JEdit		| 81.782
+JSSE		| 41.864
+Rhino		| 132.452
+SWIFT/prowide	| 757.507
+UMLet		| 53.000
+gephi		|
+Freemind	| 
