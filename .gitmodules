@@ -34,3 +34,9 @@
 [submodule "freemind-code"]
 	path = freemind-code
 	url = https://git.code.sf.net/p/freemind/code
+[submodule "JTransforms"]
+	path = jtransforms
+	url = https://github.com/wendykierp/JTransforms.git
+[submodule "jhotdraw-git"]
+	path = jhotdraw
+	url = https://git.code.sf.net/p/jhotdraw/git
