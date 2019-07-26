@@ -27,7 +27,7 @@
 	url = https://github.com/apache/lucene-solr.git
 [submodule "apache-log4j"]
 	path = apache-log4j
-	url = ttps://git-wip-us.apache.org/repos/asf/logging-log4j2.git
+	url = https://git-wip-us.apache.org/repos/asf/logging-log4j2.git
 [submodule "gephi"]
 	path = gephi
 	url = https://github.com/gephi/gephi.git
